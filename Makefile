@@ -12,3 +12,6 @@ include $(THEOS_MAKE_PATH)/library.mk
 
 after-stage::
 	mv _/System/Library/WeeAppPlugins/WeeAppTest.bundle/WeeAppTest.dylib _/System/Library/WeeAppPlugins/WeeAppTest.bundle/WeeAppTest
+
+up:
+	scp obj/WeeAppTest.dylib root@192.168.1.2:/System/Library/WeeAppPlugins/WeeAppTest.bundle/WeeAppTest
