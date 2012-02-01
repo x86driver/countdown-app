@@ -10,8 +10,12 @@ WeeAppTest_PRIVATE_FRAMEWORKS = BulletinBoard
 
 include $(THEOS_MAKE_PATH)/library.mk
 
+TARGET_IP = 192.168.1.4
+
 after-stage::
 	mv _/System/Library/WeeAppPlugins/WeeAppTest.bundle/WeeAppTest.dylib _/System/Library/WeeAppPlugins/WeeAppTest.bundle/WeeAppTest
 
 up:
-	scp obj/WeeAppTest.dylib root@192.168.1.2:/System/Library/WeeAppPlugins/WeeAppTest.bundle/WeeAppTest
+	scp obj/WeeAppTest.dylib root@${TARGET_IP}:/System/Library/WeeAppPlugins/WeeAppTest.bundle/WeeAppTest
+	ssh root@${TARGET_IP} sbreload
+

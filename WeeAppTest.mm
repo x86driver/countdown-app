@@ -62,7 +62,7 @@ unsigned int countdown()
         lbl.backgroundColor = [UIColor clearColor];
         lbl.textColor = [UIColor whiteColor];
 //        lbl.text = @"林軒宇是大帥哥";
-        lbl.text = [NSString stringWithFormat:@"退伍倒數 %d 天唷！", countdown()];
+        lbl.text = [NSString stringWithFormat:@"退伍倒數 %d 天唷！😄", countdown()];
         lbl.textAlignment = UITextAlignmentCenter;
         [_view addSubview:lbl];
         [lbl release];
